@@ -16,8 +16,8 @@ module store_unit(
     
     assign funct3=instruction[14:12];
     assign opcode=instruction[6:0]; 
-    assign zero24= 16'b000000000000000000000000; 
-    assign zero16= 16'b0000000000000000; 
+    assign [23:0] zero24= 16'b000000000000000000000000; 
+    assign [15:0] zero16= 16'b0000000000000000; 
     
     always @(*) begin
             case({funct3,opcode})
